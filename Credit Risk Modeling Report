@@ -1,0 +1,32 @@
+
+1. Objective
+The objective of this project is to build a credit risk model to predict the probability that a borrower
+will default on a loan. The model outputs a Probability of Default (PD) based on financial and credit
+history features.
+
+2. Dataset Description
+The dataset contains borrower financial and credit history information including: loan amount,
+annual income, total balance, total credit limit, total monthly debt, monthly income, age, past
+delinquencies, and default status.
+
+3. Feature Engineering
+To enhance predictive performance, additional financial ratios were created:
+• Credit Utilization Rate = Total Balance / Total Credit Limit
+• Debt-to-Income Ratio (DTI) = Total Monthly Debt / Monthly Income
+• Loan-to-Income Ratio = Loan Amount / Annual Income
+
+4. Model Development
+Two machine learning models were developed: Logistic Regression and LightGBM. Logistic
+Regression was used as a baseline due to its interpretability and common use in credit risk
+modeling. LightGBM was used to capture non-linear relationships and improve predictive accuracy.
+
+5. Model Evaluation
+Model performance was evaluated using Area Under the ROC Curve (AUC) and Gini coefficient.
+AUC measures the model’s ability to distinguish between defaulters and non-defaulters. Gini
+coefficient is calculated as: Gini = 2 × AUC − 1.
+
+6. Conclusion
+The credit risk model successfully predicts borrower default probability using engineered financial
+features. LightGBM generally provides stronger predictive performance, while Logistic Regression
+offers interpretability. Such models can support loan approval decisions and risk management
+strategies.
